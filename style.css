@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+/* Configurações Gerais */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+:root {
+    --cor1: #0C1F33;
+    --cor2: #2D2F33;
+    --cor3: #5C5F66;
+    --cor4: #264E86;
+    --cor5: #A65128;
+    --font1: 'Montserrat';
+    --font2: 'Roboto';
+    --font3: 'Mozilla Headline'; 
+}
+
+/*===================================================*/
+
+/* Header Adicional */
+
+.hdr1 {
+    height: 75px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    background: black;
+}
+
+.hdr1_fgr {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    gap: 5px;
+}
+.hdr1_fgr > img {
+    width: 65px;
+    height: 60px;
+}
+.hdr1_fgr > p {
+    color: white;
+    font: normal normal 1.1em var(--font3);
+}
+
+.hdr1_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.hdr1_nav_items {
+    color: white;
+    text-decoration: none;
+    font: normal normal 1em var(--font1);
+}
+.hdr1_nav_items > p::after {
+    content: ' ▼';
+}
+.hdr1_nav_items:hover > p::after {
+    content: ' ▲';
+}
+
+.btnContact {
+    width: 225px;
+    height: 55px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.btnContact > a {
+    color: white;
+    text-decoration: none;
+    font: normal bold 1em var(--font1);
+}
+.btnContact:hover > a {
+    z-index: 1;
+    color: black;
+}
+.btnContact-efeitoHover {
+    position: absolute;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.4s ease-out 0s;
+}
+.btnContact:hover > .btnContact-efeitoHover {
+    transform: translateX(0%);
+}
+
+/*===================================================*/
+
+/* Configurações Gerais -> Main <- */
+
+main {
+    height: 3000px;
+}
+
+/*===================================================*/
+
+/* Sessão Sobre */
+
+.mn_secSobre {
+    min-height: 500px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 25% 25% 20%;
+    justify-content: center;
+    align-content: center;
+    background: black url('Recursos/FundoSobre.jpg') no-repeat center / cover;
+    box-shadow: inset 0px 0px 25px black;
+}
+.mn_secSobre_h1 {
+    grid-row: 2 / 3;
+    font: normal bold 3.1em var(--font1);
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+.mn_secSobre_h2 {
+    grid-row: 3 / 4;
+    font: normal normal 1.5em var(--font1);
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+/* Header Guia */
+
+.hdr2 {
+    position: sticky;
+    top: 0px;
+    grid-row: 4 / 5;
+    min-height: 75px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.hdr2_nav {
+    padding: 0px 15px;
+    height: 65px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;  
+    gap: 10px;  
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    background: #5c5f662d;
+}
+.hdr2_nav_items {
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font: normal normal 1em var(--font1);
+    background: #5c5f662d;
+    backdrop-filter: blur(15px);
+    transition: all 0.35s ease-out 0s;
+}
+.hdr2_nav_items:hover {
+    background: #e1e2e62d;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.301);
+}
+
+/*===================================================*/

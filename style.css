@@ -15,10 +15,14 @@
     --cor2: #2D2F33;
     --cor3: #5C5F66;
     --cor4: #264E86;
-    --cor5: #A65128;
+    --cor5: #c07c5a;
     --font1: 'Montserrat';
     --font2: 'Roboto';
     --font3: 'Mozilla Headline'; 
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /*===================================================*/
@@ -32,7 +36,7 @@
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
-    background: black;
+    background: var(--cor1);
 }
 
 .hdr1_fgr {
@@ -104,6 +108,7 @@
 
 main {
     height: 3000px;
+    background: var(--cor1);
 }
 
 /*===================================================*/
@@ -119,7 +124,7 @@ main {
     justify-content: center;
     align-content: center;
     background: black url('Recursos/FundoSobre.jpg') no-repeat center / cover;
-    box-shadow: inset 0px 0px 25px black;
+    box-shadow: inset 0px -75px 25px var(--cor1);
 }
 .mn_secSobre_h1 {
     grid-row: 2 / 3;
@@ -146,6 +151,7 @@ main {
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
+    z-index: 2;
 }
 
 .hdr2_nav {
@@ -158,7 +164,7 @@ main {
     gap: 10px;  
     border-radius: 25px;
     backdrop-filter: blur(15px);
-    background: #5c5f662d;
+    background: #5c5f6660;
 }
 .hdr2_nav_items {
     border-radius: 25px;
@@ -174,6 +180,142 @@ main {
 .hdr2_nav_items:hover {
     background: #e1e2e62d;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.301);
+}
+
+/*===================================================*/
+
+/* Projetos Concluídos */
+
+.mn_secPsCs {
+    padding: 0px 5px;
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(2, minmax(255px, 300px)) minmax(0px, 1fr);
+    grid-template-rows: 100px 450px 450px;
+    grid-template-areas: 
+    '. h1   h1   .'
+    '. art1 art2 .'
+    '. art3 art4 .';
+    justify-items: center;
+    align-items: center;
+    gap: 40px 30px;
+    background: var(--cor1);
+}
+
+.mn_secPsCs_h1 {
+    grid-area: h1;
+    font: normal bold 2em var(--font1);
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+.mn_secPsCs_art {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: gray;
+    list-style-position: inside;
+    transition: all 0.3s ease-out 0s;
+}
+.mn_secPsCs_art:hover {
+    transform: scale(110%);
+    box-shadow: 0px 0px 15px var(--cor4);
+}
+.Proj {
+    height: 50%;
+    width: 100%;
+    box-shadow: inset 0px 0px 15px var(--cor1);
+}
+.ProjConcl {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    transform: translateY(100%);
+    transition: all 0.65s ease-out 0s;
+    box-shadow: inset 0px 0px 15px black;
+}
+.mn_secPsCs_art > div {
+    padding: 15px 15px 10px 15px;
+    z-index: 1;
+    background: #0C1F33;
+    height: 60%;
+}
+.mn_secPsCs_art > div > h1 {
+    width: 100%;
+    color: white;
+    font: normal normal 1.1em var(--font1);
+}
+.mn_secPsCs_art > div > ul > li{
+    color: white;
+    font: normal normal 0.9em var(--font1);
+}
+
+.secPsCs_art1 {
+    grid-area: art1;
+}
+.secPsCs_art1 > .Proj {
+    background: url('Recursos/Proj1.jpg') no-repeat center / cover;
+}
+.secPsCs_art1 > .ProjConcl {
+    background: url('Recursos/ProjConcl1.jpg') no-repeat center / cover;
+}
+.secPsCs_art1:hover > .ProjConcl {
+    transform: translateY(0%);
+}
+
+.secPsCs_art2 {
+    grid-area: art2;
+}
+.secPsCs_art2 > .Proj {
+    background: url('Recursos/Proj2.jpg') no-repeat center / cover;
+}
+.secPsCs_art2 > .ProjConcl {
+    background: url('Recursos/ProjConcl2.jpg') no-repeat center / cover;
+}
+.secPsCs_art2:hover > .ProjConcl {
+    transform: translateY(0%);
+}
+
+.secPsCs_art3 {
+    grid-area: art3;
+}
+.secPsCs_art3 > .Proj {
+    background: url('Recursos/Proj3.jpg') no-repeat center / cover;
+}
+.secPsCs_art3 > .ProjConcl {
+    background: url('Recursos/ProjConcl3.jpg') no-repeat center / cover;
+}
+.secPsCs_art3:hover > .ProjConcl {
+    transform: translateY(0%);
+}
+
+.secPsCs_art4 {
+    grid-area: art4;
+}
+.secPsCs_art4 > .Proj {
+    background: url('Recursos/Proj4.jpg') no-repeat center / cover;
+}
+.secPsCs_art4 > .ProjConcl {
+    background: url('Recursos/ProjConcl4.jpg') no-repeat center / cover;
+}
+.secPsCs_art4:hover > .ProjConcl {
+    transform: translateY(0%);
+}
+
+.secPsCs_art5 {
+    grid-area: art5;
+}
+.secPsCs_art5 > .Proj {
+    background: url('Recursos/Proj5.jpg') no-repeat center / cover;
+}
+.secPsCs_art5 > .ProjConcl {
+    background: url('Recursos/ProjConcl5.jpg') no-repeat center / cover;
+}
+.secPsCs_art5:hover > .ProjConcl {
+    transform: translateY(0%);
 }
 
 /*===================================================*/

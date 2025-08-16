@@ -502,6 +502,7 @@ main {
     font: normal bold 2.25em var(--font3);
 }
 .mn_seccomp_inf_txt > h1 {
+    width: 80vw;
     margin: 0px 0px 35px 0px;
     color: white;
     font: normal bold 3em var(--font3);
@@ -528,6 +529,7 @@ main {
     height: 400px;
     width: 490px;
     background: rgba(0, 0, 0, 0) url('Recursos/FundoInf.png') no-repeat center / cover;
+    border-bottom: 2px solid var(--cor4);
 }
 
 /* Avaliações */
@@ -728,9 +730,9 @@ main {
         right: 0px;
         top: 80px;
         height: 300px;
-        width: 390px;
+        width: 300px;
         position: absolute;
-        bottom: 0px;
+        bottom: 50px;
         margin: 0px;
         right: 0px;
     }
@@ -782,11 +784,10 @@ main {
         font-size: 1.2em;   
     }
     .mn_seccomp_inf_txt > ul {
-        columns: 1;
+        columns: 2;
     }
     .mn_seccomp_inf_img {
-        height: 250px;
-        width: 340px;
+        display: none;
     }
     /*===============================================*/
     .mn_ava {
@@ -815,10 +816,10 @@ main {
         width: 450px;
         top: 80px;  
     }
-    .mn_seccomp_inf_img {
-        position: static;
+    .mn_seccomp_inf_txt > ul {
+        columns: 1;
     }
-        /*===============================================*/
+    /*===============================================*/
     .mn_ava {
         grid-template-columns: 400px;  
         grid-template-rows: 100px repeat(6, 1fr);
@@ -933,5 +934,74 @@ main {
     }
     .ftr_art_Fim > h2 {
         font-size: 0.9em;
+    }
+}
+
+@media (max-width: 499px) {
+    .hdr1 {
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    .hdr1_fgr {
+        transform: scale(90%);
+        gap: 0px;
+    }
+    .hdr1_nav_items {
+        font: normal normal 0.9em var(--font1);
+    }  
+    .btnContact {
+        transform: scale(90%);
+    }
+    /*===============================================*/
+    .mn_secSobre {
+        min-height: 650px;
+        padding: 0px 25px;
+        gap: 0px;
+    }
+    .mn_secSobre_h1 {
+        font-size: 1.75em;
+    }
+    .mn_secSobre_h2 {
+        font-size: 1em;
+    }
+    /*===============================================*/
+    .mn_secPsCs {
+        gap: 0px;
+    }
+    .mn_secPsCs_h1 {
+        text-align: center;
+    }
+    .mn_secPsCs_art {
+        transform: scale(80%);
+    }
+    .mn_secPsCs_art:hover {
+        transform: scale(90%);
+    }
+    /*===============================================*/
+    .mn_seccomp_ind_txt > h1 {
+        margin: 0px 0px 175px 0px;
+    }
+    .mn_seccomp_ind_txt > img {
+        top: 125px;
+        width: 325px;
+    }
+    .mn_seccomp_inf_txt > h2 {
+        font-size: 1.25em;
+    }
+    .mn_seccomp_inf_txt > h1 {
+        font-size: 1.55em;
+    }
+    .mn_seccomp_inf_txt > p {
+        width: 70vw;
+        font-size: 1em;
+    }
+    /*===============================================*/
+    .mn_ava {
+        gap: 0px;
+    }
+    .mn_ava > h1 {
+        font-size: 2em;
+    }
+    .mn_ava_art {
+        transform: scale(80%);
     }
 }

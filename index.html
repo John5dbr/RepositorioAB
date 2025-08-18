@@ -152,7 +152,6 @@
                         <li>Lorem ipsum dolor sit amet.</li>
                     </ul>
                 </div>
-                <figure class="mn_seccomp_inf_img"></figure>
             </article>
         </section>
         <section class="mn_ava" id="SessaoAvaliacoes">
@@ -237,36 +236,19 @@
             <h2><em>"Construindo experiências digitais que unem funcionalidade e design."</em></h2>
         </article>
     </footer>
-    <script>
+    <script type="module">
         /*==========================================================*/
         // Função: Menu para telas pequenas
-        let clicks = 0;
-        let deg = 90;
+        import funcoes from './Funcoes.js';
+        let menu = document.getElementById('Menu');
+        let projetosConcluidos = document.getElementById('PsCs');
+        let competencias = document.getElementById('Comp');
+        let avaliacoes = document.getElementById('Ava');
+        let contato =  document.getElementById('Cont');
         let btnMenu = document.getElementById('btnMenu');
         btnMenu.addEventListener('click', ClicouMenu)
-        function ClicouMenu() { 
-            let menu = document.getElementById('Menu');
-            let projetosConcluidos = document.getElementById('PsCs');
-            let competencias = document.getElementById('Comp');
-            let avaliacoes = document.getElementById('Ava');
-            let contato =  document.getElementById('Cont');
-            if (clicks % 2 == 0) {
-                menu.style = 'border-radius: 100%;'
-                projetosConcluidos.style = 'display: none;'
-                competencias.style = 'display: none;'
-                avaliacoes.style = 'display: none;'
-                contato.style = 'display: none;'
-                btnMenu.style = `transform: rotate(${deg}deg);`
-            } else {
-                menu.style = 'border-radius: 10px;'
-                projetosConcluidos.style = 'display: block;'
-                competencias.style = 'display: block;'
-                avaliacoes.style = 'display: block;'
-                contato.style = 'display: block;'
-                btnMenu.style = `transform: rotate(${deg}deg);`
-            }
-            clicks++
-            deg += 90
+        function ClicouMenu() {
+            funcoes.ClicouMenu(menu, projetosConcluidos, competencias, avaliacoes, contato);
         }
         /*==========================================================*/
     </script>

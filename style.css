@@ -27,6 +27,11 @@
 
 html {
     scroll-behavior: smooth;
+    cursor: url('Recursos/cursor1.png'), auto;
+}
+
+a:hover {
+    cursor: url('Recursos/cursor2.png'), auto;
 }
 
 /*===================================================*/
@@ -74,6 +79,7 @@ html {
 }
 .hdr1_nav_items:hover > p::after {
     content: ' ▲';
+    
 }
 
 .btnContact {

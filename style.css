@@ -27,6 +27,11 @@
 
 html {
     scroll-behavior: smooth;
+    cursor: url('Recursos/cursor1.png'), auto;
+}
+
+a:hover {
+    cursor: url('Recursos/cursor2.png'), auto;
 }
 
 /*===================================================*/
@@ -34,6 +39,7 @@ html {
 /* Header Adicional */
 
 .hdr1 {
+    position: relative;
     height: 75px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -74,6 +80,7 @@ html {
 }
 .hdr1_nav_items:hover > p::after {
     content: ' ▲';
+    
 }
 
 .btnContact {
@@ -105,6 +112,102 @@ html {
 }
 .btnContact:hover > .btnContact-efeitoHover {
     transform: translateX(0%);
+}
+
+/* Header Adicional -> Efeito dos links*/
+
+.hdr1_benef {
+    border-radius: 5px;
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 25px;
+    z-index: 2;
+    padding: 25px;
+    background: var(--cor1);
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.hdr1_benef > * {
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 10px;  
+    min-width: 455px;
+}
+
+.hdr1_benef > img {
+    position: absolute;
+    top: -20px;
+    left: 41%;
+    min-width: 30px;
+    height: 30px;
+}
+
+.hdr1_benef_mc > h1 {
+    font: normal bold 1.5em var(--font1);
+}
+.hdr1_benef_mc > p {
+    font: normal normal 1em var(--font1);
+}
+
+.hdr1_benef_hp > h1 {
+    font: normal bold 1.5em var(--font1);
+}
+.hdr1_benef_hp > p {
+    font: normal normal 1em var(--font1);
+}
+
+.hdr1_obje {
+    border-radius: 5px;
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 25px;
+    z-index: 2;
+    padding: 25px;
+    background: var(--cor1);
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.hdr1_obje > * {
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 10px;  
+    min-width: 455px;
+}
+
+.hdr1_obje > img {
+    position: absolute;
+    top: -20px;
+    left: 55.5%;
+    min-width: 30px;
+    height: 30px;
+}
+
+.hdr1_obje_mp > h1 {
+    font: normal bold 1.5em var(--font1);
+}
+.hdr1_obje_mp > p {
+    font: normal normal 1em var(--font1);
+}
+
+.hdr1_obje_lp > h1 {
+    font: normal bold 1.5em var(--font1);
+}
+.hdr1_obje_lp > p {
+    font: normal normal 1em var(--font1);
 }
 
 /*===================================================*/
@@ -776,6 +879,18 @@ main {
         '. art3 art4 .'
         '. art5 art6 .';
     }
+    /*===============================================*/
+    .hdr1_ctn {
+        max-width: 490px;
+    }
+    .hdr1_benef > .hdr1_benef_mc, .hdr1_benef_hp {
+        width: 100%;
+        text-align: left;
+    }
+    .hdr1_obje > .hdr1_obje_mp, .hdr1_obje_lp {
+        width: 100%;
+        text-align: left;
+    }
 }
 
 @media (max-width: 900px) {
@@ -883,6 +998,15 @@ main {
     }
     .ftr_art_Fim > h1 {
         font-size: 1.25em;
+    }
+    /*===============================================*/
+    .hdr1_ctn > img {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hdr1_ctn {
+        max-width: 450px;
+        padding: 20px 15px;
     }
 }
 

@@ -18,10 +18,56 @@
             <a href="#" class="hdr1_nav_items nav_items2"><p>Objetivos</p></a>
         </nav>
         <div class="btnContact">
-            <a href="#">
+            <a href="#Footer">
                 Entre em Contato
             </a>
             <div class="btnContact-efeitoHover"></div>
+        </div>
+        <div class="hdr1_benef hdr1_ctn">
+            <div class="hdr1_benef_mc hdr1_benef_items">
+                <h1>Meus conhecimentos</h1>
+                <p>Conhecimento técnico em eletricidade.</p>
+                <p>Leitura e interpretação de projetos elétricos.</p>
+                <p>Segurança no trabalho.</p>
+                <p>Diagnóstico e resolução de problemas.</p>
+                <p>Uso de ferramentas e equipamentos.</p>
+                <p>Instalação de sistemas elétricos.</p>
+                <p>Conhecimentos básicos de automação e eletrônica.</p>
+                <p>Organização e planejamento.</p>
+                <p>Trabalho em equipe e comunicação.</p>
+                <p>Atualização constante.</p>
+            </div>
+            <img src="Recursos/Minisetinha.png" alt="">
+            <div class="hdr1_benef_hp hdr1_benef_items">
+                <h1>Habilidades Pessoais</h1>
+                <p>Organização financeira e controle de custos.</p>
+                <p>Gestão eficiente do tempo e cumprimento de prazos.</p>
+                <p>Autonomia, disciplina e responsabilidade no trabalho.</p>
+                <p>Boa comunicação e clareza na apresentação de orçamentos.</p>
+                <p>Relacionamento interpessoal para fidelização de clientes.</p>
+                <p>Proatividade na identificação e solução de problemas.</p>
+                <p>Capacidade de negociação justa e estratégica.</p>
+                <p>Adaptabilidade diante de imprevistos no serviço.</p>
+                <p>Atendimento ao cliente com foco em confiança e satisfação.</p>
+                <p>Interesse constante em atualização e aprendizado contínuo.</p>
+            </div>
+        </div>
+        <div class="hdr1_obje hdr1_ctn">
+            <div class="hdr1_obje_mp hdr1_obje_items">
+                <h1>Metas Profissionais</h1>
+                <p>Ampliar a carteira de clientes em X% no próximo ano.</p>
+                <p>Manter índice de satisfação do cliente acima de 90%.</p>
+                <p>Reduzir em X% o tempo médio de execução de <br> determinados serviços.</p>
+                <p>Garantir zero acidentes de trabalho através do <br> uso de EPIs e boas práticas.</p>
+            </div>
+            <img src="Recursos/Minisetinha.png" alt="">
+            <div class="hdr1_obje_lp hdr1_obje_items">
+                <h1>Objetivos de Longo Prazo</h1>
+                <p>Consolidar a marca pessoal como referência <br> em serviços elétricos de qualidade.</p>
+                <p>Expandir a atuação para além do MEI, podendo <br> contratar ajudantes ou se tornar microempresa (ME).</p>
+                <p>Especializar-se em tecnologias sustentáveis <br> (energia solar, eficiência energética, casas inteligentes).</p>
+                <p>Construir rede sólida de parcerias com construtoras, <br> arquitetos e empresas de manutenção.</p>
+            </div> 
         </div>
     </header>
     <main class="mn">
@@ -238,8 +284,9 @@
     </footer>
     <script type="module">
         /*==========================================================*/
-        // Função: Menu para telas pequenas
         import funcoes from './Funcoes.js';
+        /*==========================================================*/
+        // Função: Menu para telas pequenas
         let menu = document.getElementById('Menu');
         let projetosConcluidos = document.getElementById('PsCs');
         let competencias = document.getElementById('Comp');
@@ -250,6 +297,9 @@
         function ClicouMenu() {
             funcoes.ClicouMenu(menu, projetosConcluidos, competencias, avaliacoes, contato);
         }
+        /*==========================================================*/
+        // Função: Efeito de aparição e sumiço para o conteúdo dos dois links
+        funcoes.LinksAdemais;
         /*==========================================================*/
     </script>
 </body>

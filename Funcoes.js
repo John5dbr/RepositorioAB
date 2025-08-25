@@ -22,7 +22,20 @@ function ClicouMenu(menu, projetosConcluidos, competencias, avaliacoes, contato)
     deg += 90
 }
 /*==========================================================*/
+// Função: Efeito de aparição e sumiço para o conteúdo dos dois links
+let links = document.querySelectorAll(`.hdr1_nav_items`);
+let elementos = document.querySelectorAll(`.hdr1_ctn`);
+const linkBenefObje = links.forEach((el, ind) => {
+    el.addEventListener('mouseenter', () => {
+        elementos[ind].style = `opacity: 1; transform: translateY(0%);`
+    })
+    el.addEventListener('mouseout', () => {
+        elementos[ind].style = `opacity: 0; transform: translateY(-5.5%);`
+    })
+})
+/*==========================================================*/
 
 export default {
-    ClicouMenu: ClicouMenu
+    ClicouMenu: ClicouMenu,
+    LinksAdemais: linkBenefObje
 };

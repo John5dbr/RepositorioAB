@@ -129,6 +129,7 @@ a:hover {
     padding: 25px;
     background: var(--cor1);
     transition: all 0.25s ease-in-out 0s;
+    opacity: 0;
 }
 
 .hdr1_benef > * {
@@ -176,6 +177,7 @@ a:hover {
     padding: 25px;
     background: var(--cor1);
     transition: all 0.25s ease-in-out 0s;
+    opacity: 0;
 }
 
 .hdr1_obje > * {
@@ -362,13 +364,6 @@ main {
     font: normal bold 2em var(--font1);
     color: white;
     text-shadow: 1px 1px 5px black;
-}
-.mn_secPsCs_h1 > strong::after {
-    content: '';
-    animation: EscritaPsCs 4.5s ease-in-out 2.5s 1 normal forwards;
-}
-@keyframes EscritaPsCs {
-    0% {content: 'P|';}5% {content: 'Pr|';}12.5% {content: 'Pro|';}15% {content: 'Proj|';}22.5% {content: 'Proje|';}25% {content: 'Projet|';}37% {content: 'Projeto|';}40% {content: 'Projetos|';}50% {content: 'Projetos |';}65% {content: 'Projetos C|';}70% {content: 'Projetos Co|';}75% {content: 'Projetos Con|';}82.5% {content: 'Projetos Conc|';}85% {content: 'Projetos Concl|';}90% {content: 'Projetos Conclu|';}92.5% {content: 'Projetos Concluí|';}95% {content: 'Projetos Concluíd|';}97.5% {content: 'Projetos Concluído|';}100% {content: 'Projetos Concluídos';}
 }
 
 .mn_secPsCs_art {
@@ -773,12 +768,75 @@ main {
 }
 
 .ftr_art_Slogam {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     padding: 25px 10px 0px 10px;
     border-top: 2px solid var(--cor4);
 }
-.ftr_art_Slogam > a {
-    color: white;
+.ftr_art_Slogam > * {
     font: italic normal 1em var(--font1);
+}
+
+#txtPadrao {
+    margin: 0px 5px 0px 0px;
+    color: var(--cor5);
+    font: italic bold 1.1em var(--font1);
+}
+
+#txtDinamico::before {
+    content: '';
+    color: white;
+    animation: Textos 15s linear 0s infinite;
+}
+@keyframes Textos {
+    0%, 20% {
+        content: 'Entre em Contato Conosco!';
+    }
+    21%, 40% {
+        content: 'Precisando de um Técnico?';
+    }
+    41%, 60% {
+        content: 'Precisando de um Concerto?';
+    }
+    61%, 80% {
+        content: 'Precisando Concertar sua Casa?';
+    }
+    81%, 100% {
+        content: 'Nos Ligue e Fale Conosco!';
+    }
+}
+
+#cursor {
+    position: absolute;
+    right: 5px;
+    height: 20px;
+    background: var(--cor1);
+    animation: Digitacao 15s steps(25) 0s infinite;
+}
+@keyframes Digitacao {
+    0%  { width: 230px; } 15%, 20%  { width: 0px; }
+    21% { width: 230px; } 35%, 40%  { width: 0px; }
+    41% { width: 235px; } 55%, 60%  { width: 0px; } 
+    61% { width: 265px; } 75%, 80%  { width: 0px; }
+    81% { width: 215px; } 95%, 100% { width: 0px; }
+}
+
+#cursor::before {
+    color: white;
+    font-weight: bold;
+    content: '|';
+    animation: Cursor 0.75s linear 0s infinite;
+}
+@keyframes Cursor {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 .ftr_art_Fim {
@@ -882,6 +940,8 @@ main {
     /*===============================================*/
     .hdr1_ctn {
         max-width: 490px;
+        z-index: 5;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.555);
     }
     .hdr1_benef > .hdr1_benef_mc, .hdr1_benef_hp {
         width: 100%;
